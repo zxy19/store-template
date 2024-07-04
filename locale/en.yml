@@ -1,0 +1,13 @@
+xypp-store-template:
+  name: XYPP Store Template
+
+xypp-store:
+  forum:
+    type:
+      fake: "Fake Items"
+    unavailable:
+      fake:
+        random: "not available"
+    create-modal:
+      providers:
+        fake: "Fake Items"
