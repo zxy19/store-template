@@ -39,7 +39,7 @@ class StoreProvider extends AbstractStoreProvider
     public function useItem(PurchaseHistory $item, User $user, string $data, UseContext $context): bool
     {
         //[Optional]
-        // When $canUse is true, this function MUST be implemented.
+        // Once canUse returns true, this function MUST be implemented.
         // do anything when using this item.
         return false;
     }
