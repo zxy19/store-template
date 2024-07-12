@@ -38,10 +38,6 @@ graph LR
 
 ## Develop
 
-### backend
+See [Wiki](https://github.com/zxy19/store-template/wiki)
 
-Plugins could extend store by offering StoreProvider extends AbstractStoreProvider. See `StoreProvider.php`
-
-### frontend
-
-This project contains a file named `StoreHelper.ts`, which has described all methods the Store exports.
+见 [Wiki](https://github.com/zxy19/store-template/wiki/zh-home)
