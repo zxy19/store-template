@@ -2,3 +2,4 @@ xypp-store-template:
   forum:
     name: XYPP Store Template
     fake: "Fake Items"
+    fake-tests: "Fake Tests"

@@ -18,5 +18,5 @@ return [
         ->js(__DIR__.'/js/dist/forum.js')
         ->css(__DIR__.'/less/forum.less'),
     new Extend\Locales(__DIR__.'/locale'),
-    (new \Xypp\Store\Extend\StoreItemProvider())->provide(StoreProvider::class)
+    (new \Xypp\Store\Extend\StoreItemProvider())->provide(StoreProvider::class)->provide(StoreProviderTests::class)
 ];

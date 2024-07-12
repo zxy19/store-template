@@ -8,9 +8,9 @@ import Model from "flarum/common/Model";
 type feApp = (
     provider: string,
     name: string,
-    getProviderData: (providerDatas: { [key: string]: string }) => Promise<void>,
-    getShowCase: (item: any, purchase_history?: any) => any,
-    getUseData: (item: any) => Promise<string>
+    getProviderData?: (providerDatas: { [key: string]: string }) => Promise<void>,
+    getShowCase?: (item: any, purchase_history?: any) => any,
+    getUseData?: (item: any) => Promise<string>
 ) => void;
 type StoreItem = Model | {
     itemData: () => Record<string, any> | null,
@@ -74,5 +74,5 @@ let Store: {
     PurchaseHelper: flarum.extensions['xypp-store'].PurchaseHelper as any,
     UseHelper: flarum.extensions['xypp-store'].UseHelper as any
 }
-export default Store
+export default Store;
 export { Store, feApp, cPurchaseHelper, cUseHelper, PurchaseHistory, StoreItem }

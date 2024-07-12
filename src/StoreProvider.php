@@ -41,5 +41,6 @@ class StoreProvider extends AbstractStoreProvider
         //[Optional]
         // When $canUse is true, this function MUST be implemented.
         // do anything when using this item.
+        return false;
     }
 }
