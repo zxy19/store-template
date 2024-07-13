@@ -12,9 +12,13 @@ export function initStore(app: ForumApplication) {
     //Provider name
     app.translator.trans("xypp-store-template.forum.fake") as string,
     //Get provider data
-    async function getProviderData(providerDatas) {
+    async function getProviderData(providerDatas, special) {
       // You can fetch the options of the provider data and put it into the providerDatas.
       providerDatas['default'] = app.translator.trans("xypp-store-template.forum.default") as string
+      // If need values from user input, you can set the callback for keys has been put in the providerDatas.
+      special['default'] = async () => {
+        return prompt("Please enter the data you want to use") || ""
+      }
     },
     undefined,
     async function (str): Promise<string> {

@@ -10,7 +10,7 @@ use Xypp\Store\Context\UseContext;
 use Xypp\Store\PurchaseHistory;
 use Xypp\Store\StoreItem;
 use Carbon\Carbon;
-
+use Xypp\Store\Context\ExpireContext;
 class StoreProviderTests extends AbstractStoreProvider
 {
     public $name = "fake-item-test";
@@ -23,7 +23,7 @@ class StoreProviderTests extends AbstractStoreProvider
     {
         return true;
     }
-    public function expire(PurchaseHistory $item): bool
+    public function expire(PurchaseHistory $item,ExpireContext $context): bool
     {
         return true;
     }

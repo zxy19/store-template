@@ -10,12 +10,13 @@ use Xypp\Store\Context\UseContext;
 use Xypp\Store\PurchaseHistory;
 use Xypp\Store\StoreItem;
 use Carbon\Carbon;
+use Xypp\Store\Context\ExpireContext;
 
 class StoreProvider extends AbstractStoreProvider
 {
     public $name = "fake-item";
 
-    public function expire(PurchaseHistory $item): bool
+    public function expire(PurchaseHistory $item, ExpireContext $context): bool
     {
         // Do when the item is delete/expire.
         // You can do anything to clean up the data.

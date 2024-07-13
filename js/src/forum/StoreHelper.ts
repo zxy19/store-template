@@ -8,7 +8,7 @@ import Model from "flarum/common/Model";
 type feApp = (
     provider: string,
     name: string,
-    getProviderData?: (providerDatas: { [key: string]: string }) => Promise<void>,
+    getProviderData?: (providerDatas: { [key: string]: string }, specialProviderKeyCallback: Record<string, () => Promise<string>>) => Promise<void>,
     getShowCase?: (item: any, purchase_history?: any) => any,
     getUseData?: (item: any) => Promise<string>
 ) => void;
